@@ -2,28 +2,111 @@
 	padding: 0;
 	margin: 0;
 }
+
+button {
+	/**resetting button styles */
+	border: none;
+	font: inherit;
+	line-height: normal;
+}
+
 body {
-	/*max-width: 100vw;
-	overflow-x: hidden;*/
+	min-width: 1440px;
 	margin: 0 auto;
-	font-family: 'Spartan', sans-serif;
 }
 
 header {
 	background-image: url(images/homepage/hero-bg-desktop@2x.jpg);
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
+	width: 100%;
 	height: 820px;
+
 }
+
 .header-content {
-	/*background-color: black;*/
-	padding-top: 4.5%;
-	margin-left: 11.5%;
+	padding-top: 65px;
+	margin-left: 165px;
 }
 
 #logo {
 	display: inline-block;
 	background-image: url(images/logo.svg);
+	background-repeat: no-repeat;
 	width: 103px;
 	height: 40px;
+	padding-bottom: 153px;
+}
+
+h1 {
+	font: 300 64px/1.125 'Spartan', sans-serif;
+	color: white;
+	letter-spacing: -0.8px;
+	width: 523px;
+	padding-bottom: 24px;
+	padding-left: 2px;
+}
+
+.header-content p {
+	font: 400 18px/1.667 'Spartan', sans-serif;
+	color: white;
+	letter-spacing: -0.23px;
+	width: 445px;
+	padding-bottom: 42px;
+}
+
+.book {
+	width: 245px;
+	height: 64px;
+	font: 600 14px/1.143 'Spartan', sans-serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+}
+
+.enjoy {
+	position: relative;
+}
+
+.enjoy img.enjoypic {
+	width: 540px;
+	height: 720px;
+	margin-left: 165px;
+	position: relative;
+	top: -70px;
+	display: inline-block;
+	z-index: 1;
+}
+
+.enjoy img.top-right {
+	width: 895px;
+	height: 320px;
+	position: absolute;
+	top: 250px;
+	left: 0;
+}
+
+.enjoy-content {
+	display: inline-block;
+	margin-left: 125px;
+	width: 445px;
+	position: absolute;
+	top: 177px;
+	z-index: 1;
+}
+
+.enjoy-content h2 {
+	font: 700 40px/1.4 'Spartan', sans-serif;
+	letter-spacing: -0.5px;
+	padding-top: 48px;
+	padding-bottom: 16px;
+	color: #242B37;
+}
+
+.enjoy-content p {
+	font: 400 18px/1.667 'Spartan', sans-serif;
+	letter-spacing: -0.23px;
+	color: #242B37;
 }
