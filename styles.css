@@ -70,7 +70,8 @@ h1 {
 	position: relative;
 }
 
-.enjoy img.enjoypic {
+img.enjoypic {
+	box-shadow: 0 75px 100px -50px #38435680;
 	width: 540px;
 	height: 720px;
 	margin-left: 165px;
@@ -80,7 +81,7 @@ h1 {
 	z-index: 1;
 }
 
-.enjoy img.top-right {
+img.top-right {
 	width: 895px;
 	height: 320px;
 	position: absolute;
@@ -94,7 +95,6 @@ h1 {
 	width: 445px;
 	position: absolute;
 	top: 177px;
-	z-index: 1;
 }
 
 .enjoy-content h2 {
@@ -109,4 +109,48 @@ h1 {
 	font: 400 18px/1.667 'Spartan', sans-serif;
 	letter-spacing: -0.23px;
 	color: #242B37;
+}
+
+.local {
+	position: relative;
+}
+
+.local-content {
+	display: inline-block;
+	margin-left: 165px;
+	width: 445px;
+	vertical-align: top;
+	padding-top: 241px;
+}
+
+.local-content h2 {
+	font: 700 40px/1.4 'Spartan', sans-serif;
+	letter-spacing: -0.5px;
+	color: #242B37;
+	padding-top: 48px;
+	padding-bottom: 16px;
+}
+
+.local-content p {
+	font: 400 18px/1.667 'Spartan', sans-serif;
+	letter-spacing: -0.23px;
+	color: #242B37;
+}
+
+img.localpic {
+	box-shadow: 0 75px 100px -50px #38435680;
+	display: inline-block;
+	width: 540px;
+	height: 720px;
+	margin-left: 125px;
+	position: relative;
+	top: 45px;
+}
+
+img.top-left {
+	width: 910px;
+	height: 320px;
+	position: absolute;
+	bottom: 40px;
+	right: 0;
 }
