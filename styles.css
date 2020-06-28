@@ -21,30 +21,31 @@ header {
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 820px;
-
 }
 
 .header-content {
 	padding-top: 65px;
-	margin-left: 165px;
+	margin-left: 167px;
 }
 
 #logo {
-	display: inline-block;
-	background-image: url(images/logo.svg);
-	background-repeat: no-repeat;
-	width: 103px;
-	height: 40px;
-	padding-bottom: 153px;
+    display: inline-block;
+    padding-bottom: 153px;
 }
 
-h1 {
+#logo img {
+    width: 103px;
+    height: 40px;
+    vertical-align: bottom;
+}
+
+.header-content h1 {
 	font: 300 64px/1.125 'Spartan', sans-serif;
 	color: #ffffff;
 	letter-spacing: -0.8px;
 	width: 523px;
 	padding-bottom: 24px;
-	padding-left: 2px;
+	margin-left: -2px;
 }
 
 .header-content p {
@@ -67,44 +68,50 @@ h1 {
 }
 
 .enjoy {
-	position: relative;
+    position: relative;
+    top: -70px;
+}
+
+img.top-right {
+	position: absolute;
+	top: 320px;
+}
+
+.enjoy-flex {
+    display: flex;
+    width: 1122px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 167px;
 }
 
 img.enjoypic {
 	box-shadow: 0 75px 100px -50px #38435680;
 	width: 540px;
 	height: 720px;
-	margin-left: 165px;
-	position: relative;
-	top: -70px;
-	display: inline-block;
-	z-index: 1;
+	/*margin-left: 167px;
+    display: inline-block;
+    vertical-align: bottom;*/
 }
 
-img.top-right {
-	width: 895px;
-	height: 320px;
-	position: absolute;
-	top: 250px;
-	left: 0;
+.enjoy-text {
+    width: 445px;
+    margin-top: 55px;
+    margin-right: 15px;
 }
 
-.enjoy-content {
-	display: inline-block;
-	margin-left: 125px;
-	width: 445px;
-	position: absolute;
-	top: 177px;
+.enjoy-text img {
+    vertical-align: top;
 }
 
-.enjoy-content h2 {
+.enjoy-text h2 {
 	font: 700 40px/1.4 'Spartan', sans-serif;
 	letter-spacing: -0.5px;
 	padding: 48px 0 16px;
 	color: #242B37;
 }
 
-.enjoy-content p {
+.enjoy-text p {
 	font: 400 18px/1.667 'Spartan', sans-serif;
 	letter-spacing: -0.23px;
 	color: #242B37;
@@ -141,7 +148,7 @@ img.localpic {
 	width: 540px;
 	height: 720px;
 	margin-left: 125px;
-	position: relative;
+	/*position: relative;*/
 	top: 45px;
 	z-index: 1;
 }
@@ -149,20 +156,20 @@ img.localpic {
 img.top-left {
 	width: 910px;
 	height: 320px;
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 40px;
 	right: 0;
 }
 
 .lines {
-	position: relative;
+	/*position: relative;*/
 	bottom: 318px;
     right: 51px;
     z-index: 1;
 }
 
 section.highlights {
-	position: relative;
+	/*position: relative;*/
 	top: -40px;
 	height: 761px;
 	background-color: #111111;
@@ -172,7 +179,7 @@ section.highlights {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
-	width: 77%;
+	width: 1122px;
 	height: 441px;
 	padding: 200px 0 120px;
 }
@@ -247,23 +254,23 @@ img + hr {
 
 .slider {
     margin-top: -40px;
-    position: relative;
+    /*position: relative;*/
 }
 
 .slider-curve {
-    position: relative;
+    /*position: relative;*/
     left: -350px;
 }
 
 .slider-lines {
-    position: absolute;
+    /*position: absolute;*/
     left: 125px;
     top: 122px;
 }
 
 .slider-content {
     margin: 0 auto;
-    width: 77%;
+    width: 1122px;
     height: 600px;
 }
 
