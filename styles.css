@@ -19,8 +19,6 @@ header {
 	background-image: url(images/homepage/hero-bg-desktop@2x.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	width: 100%;
-	height: 820px;
 }
 
 .header-content {
@@ -67,6 +65,10 @@ header {
 	border: 1px solid #ffffff;
 }
 
+.book.bookpad {
+    margin-bottom: 198px;
+}
+
 .enjoy {
     position: relative;
     top: -70px;
@@ -82,22 +84,19 @@ img.top-right {
     width: 1122px;
     justify-content: space-between;
     align-items: center;
-    margin-left: 167px;
+    margin: 0 auto;
 }
 
 img.enjoypic {
 	box-shadow: 0 75px 100px -50px #38435680;
 	width: 540px;
 	height: 720px;
-	/*margin-left: 167px;
-    display: inline-block;
-    vertical-align: bottom;*/
 }
 
 .enjoy-text {
     width: 445px;
     margin-top: 55px;
-    margin-right: 15px;
+    margin-right: 7px;
 }
 
 .enjoy-text img {
@@ -118,15 +117,22 @@ img.enjoypic {
 }
 
 .local {
-	position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 55px;
+    margin-left: 167px;
 }
 
 .local-content {
-	display: inline-block;
-	margin-left: 165px;
-	width: 445px;
-	vertical-align: top;
-	padding-top: 241px;
+    width: 445px;
+    position: relative;
+    top: -20px;
+}
+
+.local-content img {
+    vertical-align: top;
 }
 
 .local-content h2 {
@@ -142,36 +148,41 @@ img.enjoypic {
 	color: #242B37;
 }
 
+.localpics {
+    display: flex;
+    position: relative;
+}
+
 img.localpic {
 	box-shadow: 0 75px 100px -50px #38435680;
 	display: inline-block;
 	width: 540px;
-	height: 720px;
-	margin-left: 125px;
-	/*position: relative;*/
-	top: 45px;
-	z-index: 1;
+    height: 720px;
+    z-index: 1;
+    flex-shrink: 0;
+
 }
 
 img.top-left {
-	width: 910px;
+	width: 907px;
 	height: 320px;
-	/*position: absolute;*/
-	bottom: 40px;
+	position: absolute;
+	bottom: 80px;
 	right: 0;
 }
 
 .lines {
-	/*position: relative;*/
-	bottom: 318px;
+	position: relative;
+	bottom: 362px;
     right: 51px;
     z-index: 1;
+    align-self: end;
+    flex-shrink: 0;
 }
 
 section.highlights {
-	/*position: relative;*/
+	position: relative;
 	top: -40px;
-	height: 761px;
 	background-color: #111111;
 }
 
@@ -206,6 +217,8 @@ section.highlights {
 }
 
 .flex-item-right {
+    display: flex;
+    flex-direction: column;
 	padding-top: 55px;
 }
 
@@ -226,7 +239,7 @@ img + hr {
 
 .text {
 	display: inline-block;
-	padding-left: 30px;
+	padding: 4px 0 0 30px;
 }
 
 .flex-item-right h3 {
