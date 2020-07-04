@@ -10,10 +10,17 @@ body {
 }
 
 button {
-	/**resetting button styles */
-	border: none;
+	/** resetting button font style */
 	font: inherit;
-	line-height: normal;
+}
+
+/* HOME PAGE */
+
+h1 {
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.125;
+	letter-spacing: -0.8px;
 }
 
 h2 {
@@ -30,14 +37,13 @@ h6 {
     letter-spacing: -0.23px;
 }
 
-header {
+header.home {
 	background-image: url(images/homepage/hero-bg-desktop@2x.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .header-content {
-	padding-top: 65px;
     margin-left: 167px;
     color: #ffffff;
 }
@@ -45,6 +51,7 @@ header {
 #logo {
     display: inline-block;
     padding-bottom: 153px;
+    padding-top: 65px;
 }
 
 #logo img {
@@ -53,17 +60,12 @@ header {
     vertical-align: bottom;
 }
 
-.header-content h1 {
-    font-size: 64px;
-    font-weight: 300;
-    line-height: 1.125;
-	letter-spacing: -0.8px;
+.home h1 {
 	width: 523px;
 	padding-bottom: 24px;
-	margin-left: -2px;
 }
 
-.header-content h6 {
+.home h6 {
 	width: 445px;
 	padding-bottom: 42px;
 }
@@ -383,6 +385,19 @@ footer p {
     text-transform: uppercase;
 }
 
-p.hours {
+footer p.hours {
     width: 446px;
+}
+
+/* BOOKING - PAGE 2 */
+
+header.booking {
+    background-image: url(images/booking/hero-bg-desktop@2x.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+.booking h6 {
+    width: 445px;
 }
