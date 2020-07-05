@@ -127,12 +127,16 @@ img.enjoypic {
 }
 
 section.local {
+    position: relative;
+    top: 55px;
+}
+
+.local-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    top: 55px;
-    margin-left: 167px;
+    width: 1122px;
+    margin: 0 auto;
 }
 
 .local-content {
@@ -147,14 +151,7 @@ section.local {
 }
 
 .local-content h2 {
-	font: 700 40px/1.4 'Spartan', sans-serif;
-	letter-spacing: -0.5px;
 	padding: 48px 0 16px;
-}
-
-.localpics {
-    display: flex;
-    position: relative;
 }
 
 img.localpic {
@@ -164,7 +161,6 @@ img.localpic {
     height: 720px;
     z-index: 1;
     flex-shrink: 0;
-
 }
 
 img.top-left {
@@ -176,12 +172,10 @@ img.top-left {
 }
 
 .lines {
-	position: relative;
+	position: absolute;
 	bottom: 362px;
     right: 51px;
     z-index: 1;
-    align-self: end;
-    flex-shrink: 0;
 }
 
 section.highlights {
