@@ -14,29 +14,43 @@
 
 <body>
   <header class="booking">
-    <div class="header-content">
-      <a href="index.html" id="logo"><img src="images/logo.svg" alt="dine logo" width="103" height="40"></a>
-      <h1>Reservations</h1>
-      <h6>We can’t wait to host you. If you have any special requirements please feel free to
-      call on the phone number below. We’ll be happy to accommodate you.
-      </h6>
+    <div class="booking-content">
+      <div class="booking-text">
+        <a href="index.html" id="logo"><img src="images/logo.svg" alt="dine logo" width="103" height="40"></a>
+        <h1>Reservations</h1>
+        <h6>We can’t wait to host you. If you have any special requirements please feel free to
+          call on the phone number below. We’ll be happy to accommodate you.
+        </h6>
+      </div>
+      <div class="booking-form">
+        <form>
+          <div class="input-wrap">
+            <input class="form-entry" name="name" type="text" placeholder="Name" id="name">
+            <label class="float" for="name">Name</label>
+          </div>
+          <div class="input-wrap">
+            <input class="form-entry" name="email" type="text" placeholder="Email" id="email">
+            <label class="float" for="email">Email</label>
+          </div>
+          <div class="input-wrap">
+          <label class="date-time">Pick a date</label><input class="date-entry month" type="number" placeholder="MM" min="1" max="12"><input class="date-entry day" type="number" placeholder="DD" min="1" max="31"><input class="date-entry year" type="number" placeholder="YYYY" min="2020" max="2020">
+          </div>
+          <div class="input-wrap">
+            <label class="date-time">Pick a time</label>
+          </div>
+
+          Make Reservation
+        </form>
+      </div>
     </div>
   </header>
-
-  Name
-  Email
-  Pick a date
-  Pick a time
-
-  Make Reservation
-
-  Marthwaite, Sedbergh
-  Cumbria
-  +00 44 123 4567
-
-  Open Times
-  Mon - Fri: 09:00 AM - 10:00 PM
-  Sat - Sun: 09:00 AM - 11:30 PM
+  <section class="book-footer-wrap">
+    <footer class="booking">
+      <a href="index.html"><img src="images/logo.svg" alt="dine logo" width="103" height="40"></a>
+      <p>Winter Park, FL<br>407.000.0000</p>
+      <p class="hours">Open Times<br>Mon - Fri: 09:00 AM - 10:00 PM<br>Sat - Sun: 09:00 AM - 11:30 PM</p>
+    </footer>
+  </section>
 
 </body>
 
