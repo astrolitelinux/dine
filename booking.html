@@ -33,12 +33,39 @@
             <label class="float" for="email">Email</label>
           </div>
           <div class="input-wrap">
-          <label class="date-time">Pick a date</label><input class="date-entry month" type="number" placeholder="MM" min="1" max="12"><input class="date-entry day" type="number" placeholder="DD" min="1" max="31"><input class="date-entry year" type="number" placeholder="YYYY" min="2020" max="2020">
+            <label class="date-time">Pick a date</label><input class="date-entry month" type="number" placeholder="MM" min="1" max="12"><input class="date-entry day" type="number" placeholder="DD" min="1" max="31"><input class="date-entry year" type="number" placeholder="YYYY" min="2020" max="2020">
           </div>
           <div class="input-wrap">
-            <label class="date-time">Pick a time</label>
+            <label class="date-time">Pick a time</label><!--
+            --><div class="select-wrap">
+              <select class="time-entry hour" name="hour" id="hour">
+                <option value="1" selected>09</option>
+                <option value="2">10</option>
+                <option value="3">11</option>
+                <option value="4">12</option>
+                <option value="5">01</option>
+                <option value="6">02</option>
+                <option value="7">03</option>
+                <option value="8">04</option>
+                <option value="9">05</option>
+                <option value="10">06</option>
+                <option value="11">07</option>
+                <option value="12">08</option>
+              </select>
+            </div><!--
+            --><div class="select-wrap">
+              <select class="time-entry mins" name="mins" id="mins">
+                <option value="00" selected>00</option>
+                <option value="30">30</option>
+              </select>
+            </div><!--
+            --><div class="select-wrap">
+              <select class="time-entry am-pm" name="am-pm" id="am-pm">
+                <option value="am">AM</option>
+                <option value="pm" selected>PM</option>
+              </select>
+            </div>
           </div>
-
           Make Reservation
         </form>
       </div>
