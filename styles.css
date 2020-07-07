@@ -9,12 +9,20 @@ body {
     font-family: 'Spartan', sans-serif;
 }
 
+/** resetting button font style */
 button {
-	/** resetting button font style */
-	font: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    border: none;
+    line-height: normal;
 }
 
-/* HOME PAGE */
+a {
+    cursor: pointer;
+}
+
+/* HOME PAGE
+------------ */
 
 h1 {
     font-size: 64px;
@@ -71,7 +79,7 @@ header.home {
 	padding-bottom: 42px;
 }
 
-.book {
+button.book {
 	width: 245px;
 	height: 64px;
     font-weight: 600;
@@ -82,6 +90,14 @@ header.home {
 	background-color: #111111;
 	color: #ffffff;
 	border: 1px solid #ffffff;
+}
+
+button.book:hover {
+    background-color: #ffffff;
+    color: #111111;
+    border: 1px solid #111111;
+    transition:  all .3s linear;
+    cursor: pointer;
 }
 
 button.book.top {
@@ -172,7 +188,7 @@ img.top-left {
 	right: 0;
 }
 
-.lines {
+.local-lines {
 	position: absolute;
 	bottom: 362px;
     right: 51px;
@@ -356,7 +372,7 @@ section.res-footer-wrap {
 }
 
 button.book.bottom{
-    background-color: transparent;
+    background-color: #1212122b;
 }
 
 footer {
@@ -382,7 +398,8 @@ footer p.hours {
     width: 446px;
 }
 
-/* BOOKING - PAGE 2 */
+/* BOOKING - PAGE 2
+------------------- */
 
 /** Hide number picker*/
 input[type=number]::-webkit-inner-spin-button,
@@ -403,10 +420,18 @@ input {
     box-sizing: border-box;
 }
 
-/** resetting select styles */
+/* general input styles */
+input {
+    font-size: 18px;
+    line-height: 1.556;
+    letter-spacing: -0.23px;
+}
+
+/** resetting form SELECT styles */
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     outline: 0;
     background-image: none;
     border: 0;
@@ -450,16 +475,9 @@ header.booking {
     background-color: #ffffff;
 }
 
-.input-wrap {
+.input-wrap, .plus-minus-wrap {
     position: relative;
     margin-bottom: 32px;
-}
-
-input {
-    font-size: 18px;
-    line-height: 1.556;
-    letter-spacing: -0.23px;
-    border-bottom: 1px solid #8E8E8E;
 }
 
 input.form-entry {
@@ -468,6 +486,8 @@ input.form-entry {
     height: 45px;
     padding-left: 16px;
     transition:  all .3s linear;
+    border-bottom: 1px solid #8E8E8E;
+    cursor: pointer;
 }
 
 .form-entry:not(:placeholder-shown) {
@@ -504,6 +524,8 @@ input.date-entry {
     height: 45px;
     text-align: center;
     margin-right: 16px;
+    border-bottom: 1px solid #8E8E8E;
+    cursor: pointer;
 }
 
 select.time-entry {
@@ -517,6 +539,7 @@ select.time-entry {
     color: #11111180;
     text-align: center;
     border-bottom: 1px solid #8E8E8E;
+    cursor: pointer;
 }
 
 .select-wrap {
@@ -524,7 +547,83 @@ select.time-entry {
     display: inline-block;
     width: 80px;
     height: 45px;
-    margin-right: 15px;
+    margin-right: 17px;
+
+}
+
+.select-wrap::after {
+    content: url("images/icons/icon-arrow.svg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 40px;
+    padding-left: 15px;
+    pointer-events: none;
+}
+
+.plus-minus-wrap {
+    box-sizing: border-box;
+    width: 444px;
+    padding: 0 25px;
+    border-bottom: 1px solid #8E8E8E;
+}
+
+.plus-minus-wrap span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.minus img {
+    vertical-align: middle;
+}
+
+.people {
+    font-size: 18px;
+    line-height: 1.556;
+    letter-spacing: -0.23px;
+    font-weight: 700;
+    color: #151515;
+}
+
+input.people {
+    width: 85%;
+    padding-left: 125px;
+}
+
+label.people {
+    position: absolute;
+    right: 178px;
+}
+
+button.res {
+    width: 100%;
+    height: 64px;
+    background-color: #111111;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+
+}
+
+.book-lines {
+    position: relative;
+    left: 665px;
+    bottom: 80px;
+    vertical-align: bottom;
+    z-index: -1;
+}
+
+.bottom-right {
+    position: relative;
+    right: 160px;
+    vertical-align: bottom;
+    z-index: -2;
 }
 
 
@@ -533,6 +632,6 @@ section.book-footer-wrap {
     color: #ffffff;
     background-color: #111111;
     /* temp postioning*/
-    position: relative;
-    top: 350px;
+    /*position: relative;
+    top: 350px;*/
 }
