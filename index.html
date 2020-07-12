@@ -7,22 +7,26 @@
   <link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet" type="text/css">
-  <title>Dine Website Challenge</title>
+  <title>Dine Challenge</title>
 </head>
 
 <body>
   <header class="home">
     <div class="header-content">
       <a href="index.html" id="logo"><img src="images/logo.svg" alt="dine logo" width="103" height="40"></a>
-      <h1>Exquisite dining since 1989</h1>
+      <h1>Exquisite dining<br>since 1989</h1>
       <h6>Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from the comfort of our farmhouse.</h6>
       <a href="booking.html"><button class="book-top">Book a table</button></a>
     </div>
   </header>
   <section class="enjoy">
     <img src="images/patterns/pattern-curve-top-right.svg" alt="pattern" class="top-right">
-    <div class="enjoy-flex">
-      <img src="images/homepage/enjoyable-place-desktop@2x.jpg" alt="enjoyable place" width="540" height="720" class="enjoypic">
+    <div class="enjoy-flex content-wrap">
+      <picture class="enjoypic">
+        <source srcset="images/homepage/enjoyable-place-tablet.jpg" media="(max-width: 768px)">
+        <source srcset="images/homepage/enjoyable-place-mobile.jpg" media="(max-width: 414px">
+        <img src="images/homepage/enjoyable-place-desktop@2x.jpg" alt="Enjoyable Place" class="enjoypic">
+      </picture>
       <div class="enjoy-text">
         <img src="images/patterns/pattern-divide.svg" alt="divider">
         <h2>Enjoyable place<br>for all the family</h2>
@@ -31,19 +35,23 @@
     </div>
   </section>
   <section class="local">
-    <div class="local-wrap">
+    <div class="local-flex content-wrap">
       <div class="local-content">
         <img src="images/patterns/pattern-divide.svg" alt="divider">
         <h2>The most locally sourced food</h2>
         <h6>All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food.</h6>
       </div>
-      <img src="images/homepage/locally-sourced-desktop@2x.jpg" alt="locally sourced" width="540" height="720" class="localpic">
+      <picture class="localpic">
+        <source srcset="images/homepage/locally-sourced-tablet.jpg" media="(max-width: 768px)">
+        <source srcset="images/homepage/locally-sourced-mobile.jpg" media="(max-width: 414px">
+        <img src="images/homepage/locally-sourced-desktop@2x.jpg" alt="Locally Sourced" class="localpic">
+      </picture>
     </div>
-      <img src="images/patterns/pattern-curve-top-left.svg" alt="pattern" class="top-left">
-      <img src="images/patterns/pattern-lines.svg" alt="lines" class="local-lines">
+    <img src="images/patterns/pattern-curve-top-left.svg" alt="pattern" class="top-left">
+    <img src="images/patterns/pattern-lines.svg" alt="lines" class="local-lines">
   </section>
   <section class="highlights">
-    <div class="highlights-flex">
+    <div class="highlights-flex content-wrap">
       <div class="flex-item-left">
         <img src="images/patterns/pattern-divide.svg" alt="divider">
         <h2>A few highlights from our menu</h2>
@@ -78,8 +86,12 @@
   </section>
   <section class="slider">
     <img src="images/patterns/pattern-curve-top-right.svg" alt="pattern" class="slider-curve"><img src="images/patterns/pattern-lines.svg" alt="lines" class="slider-lines">
-    <div class="slider-content">
-      <img src="images/homepage/family-gathering-desktop@2x.jpg" alt="gathering" width="540" height="600" class="gather">
+    <div class="slider-content content-wrap">
+      <picture class="gatherpic">
+        <source srcset="images/homepage/family-gathering-tablet.jpg" media="(max-width: 768px)">
+        <source srcset="images/homepage/family-gathering-mobile.jpg" media="(max-width: 414px">
+        <img src="images/homepage/family-gathering-desktop@2x.jpg" alt="Family Gathering" class="gatherpic">
+      </picture>
       <div class="slider-text">
         <div>
           <h2>Family Gathering</h2>
@@ -95,19 +107,21 @@
       </div>
     </div>
   </section>
-  <section class="res-footer-wrap">
-    <div class="res-text">
-      <h2>Ready to make a reservation?</h2>
-      <a href="booking.html"><button class="book-bottom">Book a table</button></a>
+  <footer>
+    <div class="res-wrap">
+      <div class="res-text">
+        <h2>Ready to make a reservation?</h2>
+        <a href="booking.html"><button class="book-bottom">Book a table</button></a>
+      </div>
     </div>
-    <footer>
+    <div class="footer-wrap">
       <a href="index.html"><img src="images/logo.svg" alt="dine logo" width="103" height="40"></a>
       <p>Winter Park, FL<br>407.000.0000</p>
       <p class="hours">Open Times<br>Mon - Fri: 09:00 AM - 10:00 PM<br>Sat - Sun: 09:00 AM - 11:30 PM</p>
-    </footer>
-  </section>
+    </div>
+  </footer>
 
-    <!--Special Events Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal. Social Events Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone. Book a table-->
+  <!--Special Events Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal. Social Events Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone. Book a table-->
 </body>
 
 </html>

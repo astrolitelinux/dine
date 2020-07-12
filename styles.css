@@ -5,7 +5,7 @@
 
 body {
 	min-width: 1440px;
-    margin: 0 auto;
+    /*margin: 0 auto; - don't need because not using width or max-width*/
     font-family: 'Spartan', sans-serif;
 }
 
@@ -37,7 +37,7 @@ h2 {
     line-height: 1.4;
 	letter-spacing: -0.5px;
 }
-
+/* p styles */
 h6 {
     font-size: 18px;
     font-weight: 400;
@@ -47,7 +47,7 @@ h6 {
 
 header.home {
 	background-image: url(images/homepage/hero-bg-desktop@2x.jpg);
-	background-size: cover;
+	background-size: 100% 820px;
 	background-repeat: no-repeat;
 }
 
@@ -60,7 +60,6 @@ header.home {
 #logo {
     display: inline-block;
     padding-bottom: 153px;
-
 }
 
 #logo img {
@@ -111,7 +110,8 @@ section.enjoy {
 
 img.top-right {
 	position: absolute;
-	top: 320px;
+    top: 320px;
+    width: 902px;
 }
 
 .enjoy-flex {
@@ -122,10 +122,10 @@ img.top-right {
     margin: 0 auto;
 }
 
-img.enjoypic {
-	box-shadow: 0 75px 100px -50px #38435680;
+.enjoypic {
+	box-shadow: 0 75px 100px -50px #38425580;
 	width: 540px;
-	height: 720px;
+    height: 720px;
 }
 
 .enjoy-text {
@@ -135,8 +135,9 @@ img.enjoypic {
 	color: #242B37;
 }
 
+/* display:block used to get rid of browser whitespace */
 .enjoy-text img {
-    vertical-align: top;
+    display: block;
 }
 
 .enjoy-text h2 {
@@ -148,7 +149,7 @@ section.local {
     top: 55px;
 }
 
-.local-wrap {
+.local-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,20 +165,19 @@ section.local {
 }
 
 .local-content img {
-    vertical-align: top;
+    display: block;
 }
 
 .local-content h2 {
 	padding: 48px 0 16px;
 }
 
-img.localpic {
-	box-shadow: 0 75px 100px -50px #38435680;
+.localpic {
+	box-shadow: 0 75px 100px -50px #38425580;
 	display: inline-block;
 	width: 540px;
     height: 720px;
     z-index: 1;
-    flex-shrink: 0;
 }
 
 img.top-left {
@@ -301,10 +301,11 @@ section.slider {
     top: -160px;
 }
 
-.gather {
+.gatherpic {
     width: 540px;
     height: 600px;
-    box-shadow: 0 75px 100px -50px #38435680;
+    box-shadow: 0 75px 100px -50px #38425580;
+    flex-shrink: 0;
 }
 
 .slider-text {
@@ -359,13 +360,15 @@ p.col-2 {
     grid-column-start: 2;
 }
 
-section.res-footer-wrap {
-    background-image: url(images/homepage/ready-bg-desktop@2x.jpg);
-	background-size: 100% 50%;
-    background-repeat: no-repeat;
-    height: 480px;
-    color: #ffffff;
+footer {
     background-color: #111111;
+    color: #ffffff;
+}
+.res-wrap {
+    background-image: url(images/homepage/ready-bg-desktop@2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 240px;
 }
 
 .res-text {
@@ -383,7 +386,7 @@ section.res-footer-wrap {
 	border: 1px solid #ffffff;
 }
 
-footer {
+.footer-wrap {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -392,7 +395,6 @@ footer {
     height: 240px;
     box-sizing: border-box;
 }
-
 
 footer p {
     font-size: 14px;
@@ -634,12 +636,157 @@ button.res {
     z-index: -2;
 }
 
-
-
 section.book-footer-wrap {
     color: #ffffff;
     background-color: #111111;
     /* temp postioning*/
     /*position: relative;
     top: 350px;*/
+}
+
+/* MEDIA QUERIES -- TABLET
+(standard iPad for now) -- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    body {
+        min-width: 768px;
+    }
+
+    h1 {
+        font-size: 48px;
+        line-height: 1.333;
+        letter-spacing: -0.6px;
+    }
+
+    header.home {
+        background-image: url(images/homepage/hero-bg-tablet@2x.jpg);
+        background-size: cover;
+        height: 992px;
+    }
+
+    .header-content {
+        margin: 0 auto;
+        width: 689px;
+        padding-top: 374px;
+        text-align: center;
+    }
+
+    #logo {
+        padding-bottom: 32px;
+    }
+
+    .home h1 {
+        width: 689px;
+        margin: 0 auto;
+    }
+
+    .home h6 {
+        width: 573px;
+        padding-bottom: 24px;
+        margin: 0 auto;
+    }
+
+    .book-top {
+        margin: 0;
+    }
+
+    /* wrap class set for all sections
+    with same width */
+    .content-wrap {
+        width: 573px;
+        margin: 0 auto;
+    }
+
+    section.enjoy {
+        position: static;
+        margin-top: -96px;
+        margin-bottom: 120px;
+    }
+
+    img.top-right {
+        top: 1092px;
+        left: -517px;
+        width: 895px;
+    }
+
+    .enjoy-flex {
+        height: 673px;
+        flex-direction: column;
+    }
+
+    .enjoypic {
+        width: 573px;
+        height: 360px;
+    }
+
+    .enjoy-text {
+        width: 457px;
+        height: 257px;
+        text-align: center;
+    }
+
+    /*margin set to center the img */
+    .enjoy-text img {
+        margin: 0 auto;
+    }
+
+    .enjoy-text h2 {
+        padding: 34px 0 16px;
+    }
+
+    section.local {
+        position: static;
+    }
+
+    .local-flex {
+        flex-direction: column-reverse;
+        height: 673px;
+    }
+
+    .localpic {
+        width: 573px;
+        height: 360px;
+    }
+
+    .local-content {
+        width: 457px;
+        height: 257px;
+        text-align: center;
+        margin-bottom: 120px;
+    }
+
+    /*margin set to center the img */
+    .local-content img {
+        margin: 0 auto;
+    }
+
+    .local-content h2 {
+        padding: 34px 0 16px;
+    }
+
+    .img.top-left {
+        width: 895px;
+        top: 2162px;
+        left: 384px;
+    }
+
+    .local-lines {
+        top: 1917px;
+        right: 40px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
