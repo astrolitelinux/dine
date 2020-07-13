@@ -24,6 +24,13 @@ a {
 /* HOME PAGE
 ------------ */
 
+.content-wrap {
+    max-width: 1300px;
+    width: 77%;
+    margin: 0 auto;
+
+}
+
 h1 {
     font-size: 64px;
     font-weight: 300;
@@ -47,7 +54,7 @@ h6 {
 
 header.home {
 	background-image: url(images/homepage/hero-bg-desktop@2x.jpg);
-	background-size: 100% 820px;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
@@ -110,16 +117,17 @@ section.enjoy {
 
 img.top-right {
 	position: absolute;
-    top: 320px;
-    width: 902px;
+    /*top: 320px;*/
+    /*width: 63.5%;*/
+    /*height: 320px;*/
 }
 
 .enjoy-flex {
     display: flex;
-    width: 1122px;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+
+    position: relative;
 }
 
 .enjoypic {
@@ -131,7 +139,6 @@ img.top-right {
 .enjoy-text {
     width: 445px;
     margin-top: 55px;
-    margin-right: 7px;
 	color: #242B37;
 }
 
@@ -153,8 +160,6 @@ section.local {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1122px;
-    margin: 0 auto;
 }
 
 .local-content {
@@ -181,8 +186,8 @@ section.local {
 }
 
 img.top-left {
-	width: 907px;
-	height: 320px;
+	width: 63.5%;
+    height: 320px;
 	position: absolute;
 	bottom: 80px;
 	right: 0;
@@ -205,8 +210,6 @@ section.highlights {
 .highlights-flex {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 auto;
-	width: 1122px;
 	height: 441px;
 	padding: 200px 0 120px;
 }
@@ -216,7 +219,7 @@ section.highlights {
 }
 
 .flex-item-left img {
-    vertical-align: top;
+    display: block;
 }
 
 .flex-item-left h2 {
@@ -294,9 +297,8 @@ section.slider {
 
 .slider-content {
     display: flex;
-    width: 1122px;
+    justify-content: space-between;
     height: 600px;
-    margin: 0 auto;
     position: relative;
     top: -160px;
 }
@@ -313,7 +315,6 @@ section.slider {
     flex-direction: column;
     width: 445px;
     color: #242B37;
-    margin-left: 130px;
 }
 
 .slider-text h2 {
@@ -336,11 +337,16 @@ section.slider {
     height: 108px;
     margin-top: 78px;
     grid-template-columns: 1fr 188px;
+    align-items: center;
     position: relative;
     left: -130px;
 }
 
-.switch hr {
+hr.tablet {
+    display: none;
+}
+
+hr.desktop {
     width: 95px;
     border: 0.5px solid #9E7F66;
     align-self: center;
@@ -359,6 +365,9 @@ section.slider {
 p.col-2 {
     grid-column-start: 2;
 }
+p.col-2-3 {
+    grid-column-start: 2;
+}
 
 footer {
     background-color: #111111;
@@ -367,16 +376,13 @@ footer {
 .res-wrap {
     background-image: url(images/homepage/ready-bg-desktop@2x.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 240px;
+    background-size: 100%;
 }
 
 .res-text {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    width: 1122px;
     height: 240px;
 }
 
@@ -389,10 +395,10 @@ footer {
 .footer-wrap {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    align-items: flex-start;
     padding-top: 78px;
-    width: 1122px;
     height: 240px;
+    /* set to border-box so 240px height will include 78px padding */
     box-sizing: border-box;
 }
 
@@ -639,9 +645,7 @@ button.res {
 section.book-footer-wrap {
     color: #ffffff;
     background-color: #111111;
-    /* temp postioning*/
-    /*position: relative;
-    top: 350px;*/
+
 }
 
 /* MEDIA QUERIES -- TABLET
@@ -691,8 +695,7 @@ section.book-footer-wrap {
         margin: 0;
     }
 
-    /* wrap class set for all sections
-    with same width */
+    /** wrap class set for all sections/containers with same width */
     .content-wrap {
         width: 573px;
         margin: 0 auto;
@@ -737,6 +740,7 @@ section.book-footer-wrap {
 
     section.local {
         position: static;
+        margin-bottom: 120px;
     }
 
     .local-flex {
@@ -753,7 +757,8 @@ section.book-footer-wrap {
         width: 457px;
         height: 257px;
         text-align: center;
-        margin-bottom: 120px;
+        position: static;
+
     }
 
     /*margin set to center the img */
@@ -765,7 +770,7 @@ section.book-footer-wrap {
         padding: 34px 0 16px;
     }
 
-    .img.top-left {
+    img.top-left {
         width: 895px;
         top: 2162px;
         left: 384px;
@@ -774,13 +779,147 @@ section.book-footer-wrap {
     .local-lines {
         top: 1917px;
         right: 40px;
+        bottom: 0;
     }
 
+    section.highlights {
+        position: static;
+        margin-bottom: 120px;
+    }
 
+    .highlights-flex {
+        flex-direction: column;
+        align-items: center;
+        padding: 96px 0;
+        height: 699px;
+    }
 
+    .flex-item-left {
+        text-align: center;
+    }
 
+    .flex-item-left img {
+        margin: 0 auto;
+    }
 
+    .flex-item-left h2 {
+        padding: 34px 0 16px;
+    }
 
+    .flex-item-right {
+        padding: 0;
+        height: 386px;
+    }
+    .text {
+        padding: 4px 0 0 28px;
+    }
+    .flex-item-right p {
+        width: 383px;
+        padding-bottom: 28px;
+    }
+
+    section.slider {
+        position: static;
+        margin-top: 0;
+        margin-bottom: 120px;
+    }
+
+    .slider-curve {
+        position: absolute;
+        top: 3373px;
+        left: -517px;
+    }
+
+    .slider-lines {
+        top: 3455px;
+        left: 39px;
+    }
+
+    .slider-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 689px;
+        height: 781px;
+        margin: 0 auto;
+        position: static;
+    }
+
+    .gatherpic {
+        width: 573px;
+        height: 360px;
+    }
+
+    .slider-text {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 689px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .gather-text {
+        width: 457px;
+    }
+    .slider-text h2 {
+        padding: 40px 0 16px;
+    }
+
+    .switch {
+        position: static;
+        width: 689px;
+        height: 37px;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 223px);
+        grid-template-rows: 28px 1fr;
+        gap: 8px 10px;
+        justify-items: center;
+
+    }
+
+    hr.desktop {
+        display: none;
+    }
+
+    hr.tablet {
+        border: 0.5px solid #9E7F66;
+        width: 48px;
+        margin-bottom: 0;
+        grid-row-start: 2;
+    }
+
+    .switch p {
+        width: 223px;
+        text-align: center;
+    }
+
+    p.col-2-3 {
+        grid-column-start: 3;
+    }
+
+    .res-wrap {
+        background-image: url(images/homepage/ready-bg-tablet.jpg);
+        height: 272px;
+    }
+
+    .res-text {
+        flex-direction: column;
+        width: 638px;
+        height: 143px;
+        padding: 64px 0;
+    }
+
+    .footer-wrap {
+        width: 689px;
+        height: 200px;
+        flex-direction: column;
+        align-items: center;
+        padding: 64px 0;
+    }
+
+    .footer-wrap a {
+        align-self: flex-start;
+    }
 
 
 
