@@ -12,7 +12,7 @@
 
 <body>
   <header class="home">
-    <div class="header-content">
+    <div class="header-content content-wrap">
       <a href="index.html" id="logo"><img src="images/logo.svg" alt="dine logo" width="103" height="40"></a>
       <h1>Exquisite dining<br>since 1989</h1>
       <h6>Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from the comfort of our farmhouse.</h6>
@@ -23,9 +23,9 @@
     <img src="images/patterns/pattern-curve-top-right.svg" alt="pattern" class="top-right">
     <div class="enjoy-flex content-wrap">
       <picture class="enjoypic">
-        <source srcset="images/homepage/enjoyable-place-tablet.jpg" media="(max-width: 768px)">
-        <source srcset="images/homepage/enjoyable-place-mobile.jpg" media="(max-width: 414px">
-        <img src="images/homepage/enjoyable-place-desktop@2x.jpg" alt="Enjoyable Place" class="enjoypic">
+        <source srcset="images/homepage/enjoyable-place-tablet.jpg" media="(max-device-width: 768px)">
+        <source srcset="images/homepage/enjoyable-place-mobile.jpg" media="(max-device-width: 414px">
+        <img src="images/homepage/enjoyable-place-desktop.jpg" alt="Enjoyable Place" class="enjoypic">
       </picture>
       <div class="enjoy-text">
         <img src="images/patterns/pattern-divide.svg" alt="divider">
@@ -36,28 +36,30 @@
   </section>
   <section class="local">
     <div class="local-flex content-wrap">
-      <div class="local-content">
+      <div class="local-text">
         <img src="images/patterns/pattern-divide.svg" alt="divider">
         <h2>The most locally sourced food</h2>
         <h6>All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food.</h6>
       </div>
-      <picture class="localpic">
-        <source srcset="images/homepage/locally-sourced-tablet.jpg" media="(max-width: 768px)">
-        <source srcset="images/homepage/locally-sourced-mobile.jpg" media="(max-width: 414px">
-        <img src="images/homepage/locally-sourced-desktop@2x.jpg" alt="Locally Sourced" class="localpic">
-      </picture>
+      <div class="img-wrap">
+        <picture class="localpic">
+        <source srcset="images/homepage/locally-sourced-tablet.jpg" media="(max-device-width: 768px)">
+        <source srcset="images/homepage/locally-sourced-mobile.jpg" media="(max-device-width: 414px">
+        <img src="images/homepage/locally-sourced-desktop.jpg" alt="Locally Sourced" class="localpic">
+        </picture>
+        <img src="images/patterns/pattern-lines.svg" alt="lines" class="local-lines">
+      </div>
     </div>
     <img src="images/patterns/pattern-curve-top-left.svg" alt="pattern" class="top-left">
-    <img src="images/patterns/pattern-lines.svg" alt="lines" class="local-lines">
   </section>
   <section class="highlights">
     <div class="highlights-flex content-wrap">
-      <div class="flex-item-left">
+      <div class="highlights-left">
         <img src="images/patterns/pattern-divide.svg" alt="divider">
         <h2>A few highlights from our menu</h2>
         <h6>We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. Our menu is revamped every season.</h6>
       </div>
-      <div class="flex-item-right">
+      <div class="highlights-right">
         <div>
           <img src="images/homepage/salmon-desktop-tablet@2x.jpg" alt="salmon"><hr><!--
           --><div class="text">
@@ -66,7 +68,7 @@
           </div>
         </div>
         <hr class="line">
-        <div class="right-nested">
+        <div>
           <img src="images/homepage/beef-desktop-tablet@2x.jpg" alt="beef"><hr><!--
           --><div class="text">
             <h3>Rosemary Filet Mignon</h3>
@@ -74,7 +76,7 @@
           </div>
         </div>
         <hr class="line">
-        <div class="right-nested">
+        <div>
           <img src="images/homepage/chocolate-desktop-tablet@2x.jpg" alt="mousse"><hr><!--
           --><div class="text">
             <h3>Summer Fruit Chocolate Mousse</h3>
@@ -85,13 +87,16 @@
     </div>
   </section>
   <section class="slider">
-    <img src="images/patterns/pattern-curve-top-right.svg" alt="pattern" class="slider-curve"><img src="images/patterns/pattern-lines.svg" alt="lines" class="slider-lines">
-    <div class="slider-content content-wrap">
-      <picture class="gatherpic">
-        <source srcset="images/homepage/family-gathering-tablet.jpg" media="(max-width: 768px)">
-        <source srcset="images/homepage/family-gathering-mobile.jpg" media="(max-width: 414px">
-        <img src="images/homepage/family-gathering-desktop@2x.jpg" alt="Family Gathering" class="gatherpic">
-      </picture>
+    <img src="images/patterns/pattern-curve-top-right.svg" alt="pattern" class="slider-curve">
+    <div class="slider-flex content-wrap">
+      <div class="img-wrap">
+        <picture class="gatherpic">
+        <source srcset="images/homepage/family-gathering-tablet.jpg" media="(max-device-width: 768px)">
+        <source srcset="images/homepage/family-gathering-mobile.jpg" media="(max-device-width: 414px">
+        <img src="images/homepage/family-gathering-desktop.jpg" alt="Family Gathering" class="gatherpic">
+        </picture>
+        <img src="images/patterns/pattern-lines.svg" alt="lines" class="slider-lines">
+      </div>
       <div class="slider-text">
         <div class="gather-text">
           <h2>Family Gathering</h2>
