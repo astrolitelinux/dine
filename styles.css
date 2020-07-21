@@ -776,9 +776,8 @@ section.book-footer-wrap {
     }
 
     .local-lines {
-        top: 1917px;
-        right: 40px;
-        bottom: 0;
+        left: 471px;
+        bottom: 56px;
     }
 
     section.highlights {
@@ -828,11 +827,11 @@ section.book-footer-wrap {
         position: absolute;
         top: 3373px;
         left: -517px;
+        width: 895px;
     }
 
     .slider-lines {
-        top: 3455px;
-        left: 39px;
+        left: -58px;
     }
 
     .slider-flex {
@@ -843,6 +842,7 @@ section.book-footer-wrap {
         height: 781px;
         margin: 0 auto;
         position: static;
+        padding: 0;
     }
 
     .gatherpic {
@@ -882,6 +882,7 @@ section.book-footer-wrap {
     }
 
     hr.tablet {
+        display: block;
         border: 0.5px solid #9E7F66;
         width: 48px;
         margin-bottom: 0;
@@ -911,16 +912,166 @@ section.book-footer-wrap {
 
     .footer-wrap {
         width: 689px;
-        height: 200px;
+        height: 328px;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
         padding: 64px 0;
+        margin: 0 auto;
     }
 
     .footer-wrap a {
         align-self: flex-start;
     }
 
+    .footer-wrap a > img {
+        display: block;
+    }
+
+    footer p.contact {
+        width: 456px;
+        align-self: flex-end;
+        margin-top: -40px;
+        padding-bottom: 32px;
+    }
+
+    footer p.hours {
+        width: 456px;
+        align-self: flex-end;
+    }
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+
+    body {
+        min-width: 375px;
+    }
+
+    .content-wrap {
+        width: 327px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 1.25;
+        letter-spacing: -0.4px;
+    }
+
+    header.home {
+        background-image: url(images/homepage/hero-bg-mobile@2x.jpg);
+        background-size: cover;
+        height: 748px;
+    }
+
+    .header-content {
+        padding-top: 232px;
+        text-align: center;
+    }
+
+    #logo {
+        padding-bottom: 32px;
+    }
+
+    #logo img {
+        width: 82.4px;
+        height: 32px;
+    }
+
+    .home h6 {
+        width: 100%;
+        padding-bottom: 32px;
+        font-size: 15px;
+        letter-spacing: -0.19px;
+
+    }
+
+    .book-top {
+        margin: 0;
+    }
+
+    section.enjoy {
+        position: static;
+        margin-top: -72px;
+        margin-bottom: 80px;
+    }
+
+    img.top-right {
+        display: none;
+    }
+
+    .enjoy-flex {
+        height: 683px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enjoypic {
+        width: 327px;
+        height: 400px;
+    }
+
+    .enjoy-text {
+        width: 327px;
+        height: 235px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .enjoy-text img {
+        margin: 0 auto;
+    }
+
+    .enjoy-text h2 {
+        font-size: 32px;
+        letter-spacing: -0.4px;
+        line-height: 1.25;
+    }
+
+    .enjoy-text h6 {
+        font-size: 15px;
+        letter-spacing: -0.19px;
+        line-height: 1.667;
+    }
+
+    section.local {
+        position: static;
+        margin-bottom: 80px;
+    }
+
+    .local-flex {
+        height: 683px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .localpic {
+        width: 327px;
+        height: 400px;
+    }
+
+    .local-text {
+        width: 327px;
+        height: 235px;
+        text-align: center;
+        margin: 0;
+    }
+
+    /*margin set to center the img */
+    .local-text img {
+        margin: 0 auto;
+    }
+
+    .local-lines {
+        display: none;
+    }
+
+    section.highlights {
+        position: static;
+        margin-bottom: 80px;
+        margin-top: 0;
+    }
 
 
 
