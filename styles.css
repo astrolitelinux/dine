@@ -30,21 +30,22 @@ a {
     margin: 0 auto;
 
 }
-
+/* only top header */
 h1 {
     font-size: 64px;
     font-weight: 300;
     line-height: 1.125;
 	letter-spacing: -0.8px;
 }
-
+/* section header styles */
 h2 {
     font-size: 40px;
     font-weight: 700;
     line-height: 1.4;
-	letter-spacing: -0.5px;
+    letter-spacing: -0.5px;
+    padding: 48px 0 16px;
 }
-/* p styles */
+/* subheader styles */
 h6 {
     font-size: 18px;
     font-weight: 400;
@@ -129,6 +130,7 @@ img.top-right {
 	box-shadow: 0 75px 100px -50px rgba(56, 66, 85, 0.5);
 	width: 540px;
     height: 720px;
+    display: block;
 }
 
 .enjoy-text {
@@ -140,10 +142,6 @@ img.top-right {
 /* display:block used to get rid of browser whitespace */
 .enjoy-text img {
     display: block;
-}
-
-.enjoy-text h2 {
-	padding: 48px 0 16px;
 }
 
 section.local {
@@ -166,10 +164,6 @@ section.local {
 
 .local-text img {
     display: block;
-}
-
-.local-text h2 {
-	padding: 48px 0 16px;
 }
 
 .img-wrap {
@@ -221,10 +215,6 @@ section.highlights {
     display: block;
 }
 
-.highlights-left h2 {
-	padding: 48px 0 16px;
-}
-
 .highlights-right {
     display: flex;
     flex-direction: column;
@@ -237,7 +227,6 @@ section.highlights {
 
 .highlights-right > div {
     display: inline-flex;
-    align-items: center;
     width: 540px;
     height: 96px;
 }
@@ -247,7 +236,7 @@ section.highlights {
 	height: 96px;
 }
 
-img + hr {
+picture + hr {
 	width: 32px;
 	margin-top: 18px;
     align-self: start;
@@ -258,6 +247,7 @@ img + hr {
     width: 350px;
     height: 88px;
     padding-left: 30px;
+    padding-top: 4px;
 }
 
 .highlights-right h3 {
@@ -304,7 +294,7 @@ section.slider {
     width: 540px;
     height: 600px;
     box-shadow: 0 75px 100px -50px rgba(56, 66, 85, 0.5);
-    display: inline-block;
+    display: block;
 }
 
 .slider-lines {
@@ -366,10 +356,7 @@ hr.desktop {
     text-transform: uppercase;
 }
 
-p.col-2 {
-    grid-column-start: 2;
-}
-p.col-2-3 {
+p.col-2, p.col-2-3 {
     grid-column-start: 2;
 }
 
@@ -390,6 +377,10 @@ footer {
     height: 240px;
 }
 
+.res-text h2 {
+    padding: 0;
+}
+
 .book-bottom {
     background-color: #1212122b;
     color: #ffffff;
@@ -399,11 +390,14 @@ footer {
 .footer-wrap {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 78px;
     height: 240px;
+    padding-top: 78px;
     /* set to border-box so 240px height will include 78px padding */
     box-sizing: border-box;
+}
+
+.footer-wrap a > img {
+    display: block;
 }
 
 footer p {
@@ -654,7 +648,6 @@ section.book-footer-wrap {
 
 /* MEDIA QUERIES -- TABLET
 (standard iPad for now) -- */
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
     body {
@@ -673,9 +666,12 @@ section.book-footer-wrap {
         letter-spacing: -0.6px;
     }
 
+    h2 {
+        padding: 34px 0 16px;
+    }
+
     header.home {
         background-image: url(images/homepage/hero-bg-tablet@2x.jpg);
-        background-size: cover;
         height: 992px;
     }
 
@@ -732,9 +728,6 @@ section.book-footer-wrap {
         margin: 0 auto;
     }
 
-    .enjoy-text h2 {
-        padding: 34px 0 16px;
-    }
 
     section.local {
         position: static;
@@ -765,9 +758,6 @@ section.book-footer-wrap {
         margin: 0 auto;
     }
 
-    .local-text h2 {
-        padding: 34px 0 16px;
-    }
 
     img.top-left {
         width: 895px;
@@ -801,10 +791,6 @@ section.book-footer-wrap {
         margin: 0 auto;
     }
 
-    .highlights-left h2 {
-        padding: 34px 0 16px;
-    }
-
     .highlights-right {
         padding: 0;
         height: 386px;
@@ -812,6 +798,7 @@ section.book-footer-wrap {
     .text {
         padding: 4px 0 0 28px;
     }
+
     .highlights-right p {
         width: 383px;
         padding-bottom: 28px;
@@ -915,17 +902,12 @@ section.book-footer-wrap {
         height: 328px;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
         padding: 64px 0;
         margin: 0 auto;
     }
 
     .footer-wrap a {
         align-self: flex-start;
-    }
-
-    .footer-wrap a > img {
-        display: block;
     }
 
     footer p.contact {
@@ -940,8 +922,36 @@ section.book-footer-wrap {
         align-self: flex-end;
     }
 
+    /* BOOKING - PAGE 2 */
+    header.booking {
+        background-image: url(images/booking/hero-bg-tablet@2x.jpg);
+    }
+
+    .booking-content {
+        flex-direction: column;
+        width: 689px;
+        padding-top: 56px;
+
+
+    }
+
+    .booking-text h1 {
+        width: 100%;
+        padding-bottom: 16px;
+        text-align: center;
+    }
+
+    .booking-text h6 {
+        width: 573px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    
+
 }
 
+/* MEDIA QUERIES - all PHONES in Portrait */
 @media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
 
     body {
@@ -959,9 +969,21 @@ section.book-footer-wrap {
         letter-spacing: -0.4px;
     }
 
+    h2 {
+        font-size: 32px;
+        letter-spacing: -0.4px;
+        line-height: 1.25;
+        padding-top: 32px;
+    }
+
+    h6 {
+        font-size: 15px;
+        letter-spacing: -0.19px;
+        line-height: 1.667;
+    }
+
     header.home {
         background-image: url(images/homepage/hero-bg-mobile@2x.jpg);
-        background-size: cover;
         height: 748px;
     }
 
@@ -982,9 +1004,6 @@ section.book-footer-wrap {
     .home h6 {
         width: 100%;
         padding-bottom: 32px;
-        font-size: 15px;
-        letter-spacing: -0.19px;
-
     }
 
     .book-top {
@@ -1023,21 +1042,10 @@ section.book-footer-wrap {
         margin: 0 auto;
     }
 
-    .enjoy-text h2 {
-        font-size: 32px;
-        letter-spacing: -0.4px;
-        line-height: 1.25;
-    }
-
-    .enjoy-text h6 {
-        font-size: 15px;
-        letter-spacing: -0.19px;
-        line-height: 1.667;
-    }
-
     section.local {
         position: static;
         margin-bottom: 80px;
+        margin-top: 0;
     }
 
     .local-flex {
@@ -1049,6 +1057,10 @@ section.book-footer-wrap {
     .localpic {
         width: 327px;
         height: 400px;
+    }
+
+    .local-lines {
+        display: none;
     }
 
     .local-text {
@@ -1063,15 +1075,169 @@ section.book-footer-wrap {
         margin: 0 auto;
     }
 
-    .local-lines {
-        display: none;
-    }
-
     section.highlights {
         position: static;
         margin-bottom: 80px;
         margin-top: 0;
     }
+
+    .highlights-flex {
+        height: 1576px;
+        padding: 72px 0;
+        flex-direction: column;
+    }
+
+    .highlights-left {
+        width: 327px;
+        height: 235px;
+        text-align: center;
+    }
+
+    /*margin set to center the img */
+    .highlights-left img {
+        margin: 0 auto;
+    }
+
+    .highlights-right {
+        height: 1277px;
+        padding: 0;
+    }
+
+    .highlights-right > div {
+        width: 327px;
+        height: 393px;
+        flex-direction: column;
+    }
+
+    .highlights-right img {
+        width: 327px;
+        height: 245px;
+        display: block;
+    }
+
+    picture + hr {
+        display: none;
+    }
+
+    .text {
+        width: 327px;
+        height: 116px;
+        text-align: center;
+        padding: 32px 0 0 0;
+    }
+
+    .text p {
+        width: 287px;
+        margin: 0 auto;
+    }
+
+    section.slider {
+        position: static;
+        margin-bottom: 80px;
+    }
+
+    .slider-curve {
+        display: none;
+    }
+
+    .slider-flex {
+        padding: 0;
+        flex-direction: column;
+        height: 840px;
+    }
+
+    .gatherpic {
+        width: 327px;
+        height: 400px;
+    }
+
+    .slider-lines {
+        display: none;
+    }
+
+    .slider-text {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: 327px;
+        height: 392px;
+        text-align: center;
+    }
+
+    .gather-text {
+        height: 252px;
+    }
+
+    .slider-text h2 {
+        padding: 0 0 16px 0;
+    }
+
+    .switch {
+        position: static;
+        display: grid;
+        width: 327px;
+        height: 116px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    hr.desktop {
+        display: none;
+    }
+
+    p.col-2, p.col-2-3 {
+        grid-column-start: 1;
+        padding-top: 16px;
+    }
+
+    hr.tablet {
+        display: block;
+        border: 0.5px solid #9E7F66;
+        width: 48px;
+        margin: 0 auto;
+    }
+
+    .res-wrap {
+        background-image: url(images/homepage/ready-bg-mobile@2x.jpg);
+    }
+
+    .res-text {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 328px;
+    }
+
+    .res-text h2 {
+        padding-bottom: 24px;
+    }
+
+    .footer-wrap {
+        flex-direction: column;
+        align-items: center;
+        height: 440px;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    footer p.hours {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
