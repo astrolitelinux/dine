@@ -14,15 +14,16 @@
 
 <body>
   <header class="booking">
-    <div class="booking-content">
+    <div class="booking-content content-wrap">
       <div class="booking-text">
-        <a href="index.html" id="logo"><img src="images/logo.svg" alt="dine logo" width="103" height="40"></a>
+        <a href="index.html" id="logo" class="logo-book"><img src="images/logo.svg" alt="dine logo" width="103" height="40"></a>
         <h1>Reservations</h1>
         <h6>We can’t wait to host you. If you have any special requirements please feel free to
           call on the phone number below. We’ll be happy to accommodate you.
         </h6>
+        <a href="#reserve" class="reserve-place"><button class="reserve-place">Reserve Place</button></a>
       </div>
-      <div class="booking-form">
+      <div class="booking-form" id="reserve">
         <form>
           <div class="input-wrap">
             <input class="form-entry" name="name" type="text" placeholder="Name" id="name">
@@ -33,10 +34,10 @@
             <label class="float" for="email">Email</label>
           </div>
           <div class="input-wrap">
-            <label class="date-time">Pick a date</label><input class="date-entry month" type="number" placeholder="MM" min="1" max="12"><input class="date-entry day" type="number" placeholder="DD" min="1" max="31"><input class="date-entry year" type="number" placeholder="YYYY" min="2020" max="2020">
+            <label class="date-time">Select a date</label><input class="date-entry month" type="number" placeholder="MM" min="1" max="12"><input class="date-entry day" type="number" placeholder="DD" min="1" max="31"><input class="date-entry year" type="number" placeholder="YYYY" min="2020" max="2020">
           </div>
           <div class="input-wrap">
-            <label class="date-time">Pick a time</label><!--
+            <label class="date-time">Select a time</label><!--
             --><div class="select-wrap">
               <select class="time-entry hour" name="hour" id="hour">
                 <option value="1" selected>09</option>
@@ -69,19 +70,19 @@
           <div class="plus-minus-wrap">
             <span class="minus"><img src="images/icons/icon-minus.svg" alt="minus"></span><input class="people" type="number" min="2" max="10" name="party" id="party" value="2"><span class="plus"><img src="images/icons/icon-plus.svg" alt="plus"></span><label class="people" for="party">people</label>
           </div>
-          <button class="res">Make Reservation</button>
+          <button class="res-button">Make Reservation</button>
         </form>
       </div>
     </div>
   </header>
   <div class="patterns">
     <img src="images/patterns/pattern-lines.svg" alt="lines" class="book-lines"><!--
-    --><img src="images/patterns/pattern-curve-bottom-right.svg" alt="pattern" class="bottom-right">
+    --><img src="images/patterns/pattern-curve-bottom-right.svg" alt="pattern" width="993" height="320" class="bottom-right">
   </div>
   <footer>
     <div class="footer-wrap content-wrap">
     <a href="index.html"><img src="images/logo.svg" alt="dine logo" width="103" height="40"></a>
-      <p>Winter Park, FL<br>407.000.0000</p>
+      <p class="contact">Winter Park, FL<br>USA<br>407.000.0000</p>
       <p class="hours">Open Times<br>Mon - Fri: 09:00 AM - 10:00 PM<br>Sat - Sun: 09:00 AM - 11:30 PM</p>
     </div>
   </footer>
