@@ -19,6 +19,7 @@
       <a href="booking.html"><button class="book-top">Book a table</button></a>
     </div>
   </header>
+  
   <section class="enjoy">
     <img src="images/patterns/pattern-curve-top-right.svg" alt="pattern" class="top-right">
     <div class="enjoy-flex content-wrap">
@@ -34,6 +35,7 @@
       </div>
     </div>
   </section>
+
   <section class="local">
     <div class="local-flex content-wrap">
       <div class="local-text">
@@ -52,6 +54,7 @@
     </div>
     <img src="images/patterns/pattern-curve-top-left.svg" alt="pattern" class="top-left">
   </section>
+
   <section class="highlights">
     <div class="highlights-flex content-wrap">
       <div class="highlights-left">
@@ -95,33 +98,68 @@
       </div>
     </div>
   </section>
+
   <section class="slider">
     <img src="images/patterns/pattern-curve-top-right.svg" alt="pattern" class="slider-curve">
-    <div class="slider-flex content-wrap">
-      <div class="img-wrap">
-        <picture class="gatherpic">
-        <source srcset="images/homepage/family-gathering-tablet.jpg" media="(max-device-width: 768px) and (min-device-width: 415px)">
-        <source srcset="images/homepage/family-gathering-mobile.jpg" media="(max-device-width: 415px) and (min-device-width: 320px)">
-        <img src="images/homepage/family-gathering-desktop.jpg" alt="Family Gathering" class="gatherpic">
-        </picture>
-        <img src="images/patterns/pattern-lines.svg" alt="lines" class="slider-lines">
-      </div>
-      <div class="slider-text">
-        <div class="gather-text">
+
+    <div class="slide-wrapper content-wrap">
+      <div class="slider-flex gathering-1">
+        <div class="img-wrap">
+          <picture class="slider-pics">
+            <source srcset="images/homepage/family-gathering-tablet.jpg" media="(max-device-width: 768px) and (min-device-width: 415px)">
+            <source srcset="images/homepage/family-gathering-mobile.jpg" media="(max-device-width: 415px) and (min-device-width: 320px)">
+            <img src="images/homepage/family-gathering-desktop.jpg" alt="Family Gathering" class="slider-pics">
+          </picture>
+          <img src="images/patterns/pattern-lines.svg" alt="lines" class="slider-lines">
+        </div>
+        <div class="slider-text">
           <h2>Family Gathering</h2>
           <h6>We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.</h6>
           <a href="booking.html"><button class="book-slider">Book a table</button></a>
         </div>
-        <div class="switch">
-          <hr class="desktop">
-          <p>Family Gathering</p>
-          <hr class="tablet">
-          <p class="col-2">Special Events</p>
-          <p class="col-2-3">Social Events</p>
+      </div>
+
+      <div class="slider-flex special-2">
+        <div class="img-wrap">
+          <picture class="slider-pics">
+            <source srcset="images/homepage/special-events-tablet.jpg" media="(max-device-width: 768px) and (min-device-width: 415px)">
+            <source srcset="images/homepage/special-events-mobile.jpg" media="(max-device-width: 415px) and (min-device-width: 320px)">
+            <img src="images/homepage/special-events-desktop.jpg" alt="Special Events" class="slider-pics">
+          </picture>
+          <img src="images/patterns/pattern-lines.svg" alt="lines" class="slider-lines">
+        </div>
+        <div class="slider-text">
+          <h2>Special Events</h2>
+          <h6>Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.</h6>
+          <a href="booking.html"><button class="book-slider">Book a table</button></a>
         </div>
       </div>
+
+      <div class="slider-flex social-3">
+        <div class="img-wrap">
+          <picture class="slider-pics">
+            <source srcset="images/homepage/social-events-tablet.jpg" media="(max-device-width: 768px) and (min-device-width: 415px)">
+            <source srcset="images/homepage/social-events-mobile.jpg" media="(max-device-width: 415px) and (min-device-width: 320px)">
+            <img src="images/homepage/social-events-desktop.jpg" alt="Social Events" class="slider-pics">
+          </picture>
+          <img src="images/patterns/pattern-lines.svg" alt="lines" class="slider-lines">
+        </div>
+        <div class="slider-text">
+          <h2>Social Events</h2>
+          <h6>Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.</h6>
+          <a href="booking.html"><button class="book-slider">Book a table</button></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="switch">
+      <div class="indicator"></div>
+      <p>Family Gathering</p>
+      <p>Special Events</p>
+      <p>Social Events</p>
     </div>
   </section>
+
   <footer>
     <div class="res-wrap">
       <div class="res-text content-wrap">
@@ -136,7 +174,6 @@
     </div>
   </footer>
 
-  <!--Special Events Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal. Social Events Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone. Book a table-->
 </body>
 
 </html>
