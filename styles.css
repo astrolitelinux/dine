@@ -17,7 +17,11 @@ button {
     line-height: normal;
 }
 
-a {
+button:hover {
+    background-color: #ffffff;
+    color: #111111;
+    border: 1px solid #111111;
+    transition:  all .3s linear;
     cursor: pointer;
 }
 
@@ -45,6 +49,7 @@ h2 {
     letter-spacing: -0.5px;
     padding: 48px 0 16px;
 }
+
 /* subheader styles */
 h6 {
     font-size: 18px;
@@ -65,14 +70,15 @@ header.home {
 }
 
 #logo {
-    display: inline-block;
-    padding-bottom: 153px;
+    display: block;
+    width: 103px;
+    height: 40px;
+    margin-bottom: 153px;
 }
 
 #logo img {
-    width: 103px;
-    height: 40px;
-    vertical-align: bottom;
+    width: 100%;
+    height: 100%;
 }
 
 .home h1 {
@@ -92,14 +98,6 @@ button {
     line-height: 1.143;
 	letter-spacing: 2px;
     text-transform: uppercase;
-}
-
-button:hover {
-    background-color: #ffffff;
-    color: #111111;
-    border: 1px solid #111111;
-    transition:  all .3s linear;
-    cursor: pointer;
 }
 
 .book-top {
@@ -396,8 +394,15 @@ footer {
     box-sizing: border-box;
 }
 
-.footer-wrap a > img {
+.footer-wrap a {
     display: block;
+    width: 103px;
+    height: 40px;
+}
+
+.footer-wrap a > img {
+    width: 100%;
+    height: 100%;
 }
 
 footer p {
@@ -415,18 +420,18 @@ footer p.hours {
 /* BOOKING - PAGE 2
 ------------------- */
 
-/** Hide number picker*/
+/* Hide number picker */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-/** for FIREFOX */
+/* for FIREFOX */
 input[type=number] {
     -moz-appearance:textfield;
 }
 
-/** resetting form INPUT styles */
+/* resetting form INPUT styles */
 input {
     font-family: inherit;
     font-size: inherit;
@@ -441,7 +446,7 @@ input {
     letter-spacing: -0.23px;
 }
 
-/** resetting form SELECT styles */
+/* resetting form SELECT styles */
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -461,9 +466,7 @@ header.booking {
 .booking-content {
     display: flex;
     justify-content: space-between;
-    width: 1122px;
     padding-top: 65px;
-    margin: 0 auto;
 }
 
 .booking-text h1 {
@@ -477,8 +480,11 @@ header.booking {
     color: #ffffff;
 }
 
+button.reserve-place {
+    display: none;
+}
+
 .booking-form {
-    display: inline-block;
     box-sizing: border-box;
     width: 540px;
     height: 545px;
@@ -524,11 +530,10 @@ input:not(:placeholder-shown) + label.float {
 }
 
 label.date-time {
-    width: 102px;
     font-size: 18px;
     line-height: 1.556;
     letter-spacing: -0.23px;
-    padding-right: 53px;
+    padding-right: 32px;
     vertical-align: middle;
 }
 
@@ -540,6 +545,14 @@ input.date-entry {
     margin-right: 16px;
     border-bottom: 1px solid #8E8E8E;
     cursor: pointer;
+}
+
+.select-wrap {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 45px;
+    margin-right: 17px;
 }
 
 select.time-entry {
@@ -554,15 +567,6 @@ select.time-entry {
     text-align: center;
     border-bottom: 1px solid #8E8E8E;
     cursor: pointer;
-}
-
-.select-wrap {
-    position: relative;
-    display: inline-block;
-    width: 80px;
-    height: 45px;
-    margin-right: 17px;
-
 }
 
 .select-wrap::after {
@@ -611,15 +615,10 @@ label.people {
     right: 178px;
 }
 
-button.res {
+.res-button {
     width: 100%;
-    height: 64px;
     background-color: #111111;
-    font-weight: 600;
-    font-size: 14px;
     line-height: 2;
-    letter-spacing: 2px;
-    text-transform: uppercase;
     color: #ffffff;
 
 
@@ -681,7 +680,7 @@ section.book-footer-wrap {
     }
 
     #logo {
-        padding-bottom: 32px;
+        margin: 0 auto 32px;
     }
 
     .home h6 {
@@ -750,14 +749,12 @@ section.book-footer-wrap {
         height: 257px;
         text-align: center;
         margin: 0;
-
     }
 
     /*margin set to center the img */
     .local-text img {
         margin: 0 auto;
     }
-
 
     img.top-left {
         width: 895px;
@@ -922,21 +919,27 @@ section.book-footer-wrap {
         align-self: flex-end;
     }
 
-    /* BOOKING - PAGE 2 */
+    /* BOOKING - PAGE 2
+    -----------------*/
+
     header.booking {
         background-image: url(images/booking/hero-bg-tablet@2x.jpg);
+        margin-bottom: 435px;
     }
 
     .booking-content {
         flex-direction: column;
         width: 689px;
         padding-top: 56px;
+        align-items: center;
+    }
 
-
+    #logo.logo-book {
+        margin: 0 0 64px;
     }
 
     .booking-text h1 {
-        width: 100%;
+        width: 689px;
         padding-bottom: 16px;
         text-align: center;
     }
@@ -945,14 +948,27 @@ section.book-footer-wrap {
         width: 573px;
         text-align: center;
         margin: 0 auto;
+        padding-bottom: 40px;
     }
 
-    
+    button.reserve-place {
+        display: none;
+    }
+
+    .booking-form {
+        position: static;
+    }
+
+    .patterns {
+        display: none;
+    }
+
 
 }
 
 /* MEDIA QUERIES - all PHONES in Portrait */
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 415px) {
 
     body {
         min-width: 375px;
@@ -993,11 +1009,8 @@ section.book-footer-wrap {
     }
 
     #logo {
-        padding-bottom: 32px;
-    }
-
-    #logo img {
-        width: 82.4px;
+        margin: 0 auto 32px;
+        width: 82px;
         height: 32px;
     }
 
@@ -1223,6 +1236,108 @@ section.book-footer-wrap {
     footer p.hours {
         width: 100%;
     }
+
+    /* BOOKING - PAGE 2
+    ------------------ */
+
+    header.booking {
+        background-image: url(images/booking/hero-bg-mobile@2x.jpg);
+        margin-bottom: 534px;
+    }
+
+    .booking-content {
+        flex-direction: column;
+        padding-top: 56px;
+    }
+
+    #logo.logo-book {
+        margin: 0 auto 40px;
+    }
+
+    .booking-text h1 {
+        width: 100%;
+        padding-bottom: 16px;
+        text-align: center;
+    }
+
+    .booking-text h6 {
+        width: 100%;
+        padding-bottom: 24px;
+        text-align: center;
+    }
+
+    a.reserve-place {
+        display: block;
+        width: 245px;
+        margin: 0 auto 91px;
+    }
+
+    button.reserve-place {
+        display: inline-block;
+        background-color: #1212122b;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+    }
+
+    .booking-form {
+        width: 100%;
+        height: 585px;
+        padding: 32px;
+        position: static;
+    }
+
+    label.date-time {
+        display: block;
+        padding-right: 0;
+        padding-bottom: 8px;
+
+    }
+
+    input.date-entry {
+        width: 73px;
+        margin-right: 14px;
+    }
+
+    .select-wrap {
+        width: 73px;
+        margin-right: 14px;
+    }
+
+    select.time-entry {
+        width: 73px;
+    }
+
+    .plus-minus-wrap {
+        width: 100%;
+        padding: 0 18px;
+    }
+
+    .plus-minus-wrap span {
+        width: 10px;
+    }
+
+    input.people {
+        padding-left: 60px;
+    }
+
+    label.people {
+        position: absolute;
+        right: 90px;
+    }
+
+
+    .patterns {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
 
 
 
