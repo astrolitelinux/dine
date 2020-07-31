@@ -147,11 +147,17 @@
       </div>
 
     </div>
-    <nav class="switch">
-      <div id="marker"></div>
-      <a href="#gathering-1">Family Gathering</a>
-      <a href="#special-2">Special Events</a>
-      <a href="#social-3">Social Events</a>
+    <nav class="switch-wrap">
+      <div class="indicator">
+        <div class="marker active"></div>
+        <div class="marker"></div>
+        <div class="marker"></div>
+      </div>
+      <div class="switches">
+        <a href="#gathering-1">Family Gathering</a>
+        <a href="#special-2">Special Events</a>
+        <a href="#social-3">Social Events</a>
+      </div>
     </nav>
   </section>
 
@@ -169,21 +175,70 @@
     </div>
   </footer>
 
-  <script type="text/javascript">
-    var marker = document.querySelector('#marker');
-    var switchitem = document.querySelectorAll('nav a');
+  <script>
+    //var slideIndex = 0;
 
-    function indicator(e) {
-      indicator.style.left = e.offsetLeft+"px";
-      indicator.style.width = e.offsetWidth+"px";
+    //new variable = an array of elements under .switches
+    var switches = document.querySelectorAll('.switches a');
+
+    //new variable = an array of elements with classname marker
+    var marker = document.querySelectorAll('.marker');
+
+    for (let i=0; i < switches.length; i++) {
+      switches[i].onclick = function(){
+        marker[i].classList.add('active');
+        let nonactive = marker.splice(i, 1);
+        //nonactive.classList.remove('active');
+        console.log(marker);
+        console.log(nonactive);
+
+      }
     }
 
-    switchitem.forEach(link => {
-      link.addEventListener('click', (e)=>{
-        indicator(e.target);
-      })
-    })
+
+    //function moveMarker() {
+
+    //  for(let i=0; i < switches.length; i++) {
+    //    switches[i].onclick = function(){
+
+    //      if (marker[i])
+
+    //      for (let j=0; j < marker.length; j++) {
+    //        if (i==j) {
+    //          marker[j].classList.add('active');
+    //        }
+    //        else {
+    //          marker[j].classList.remove('active');
+    //        }
+    //      }
+    //    }
+
+    //  }
+
+    //}
+
+    //  for (i = 0; i < slides.length; i++) {
+    //    // initially set the display to
+    //    // none for every image.
+    //    slides[i].style.display = "none";
+    //  }
+
+    //  // increase by 1, Global variable
+    //  slideIndex++;
+
+    //  // check for boundary
+    //  if (slideIndex > slides.length) {
+    //    slideIndex = 1;
+    //  }
+
+    //  for (i = 0; i < marker.length; i++) {
+    //    marker[ i ].className = marker[ i ].className.replace(" active", "");
+    //  }
+
+
+
   </script>
+
 </body>
 
 </html>
