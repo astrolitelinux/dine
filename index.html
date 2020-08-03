@@ -106,7 +106,7 @@
 
     <div class="slide-wrapper content-wrap">
 
-      <div class="slider-grid" id="gathering-1">
+      <div class="slider-grid show-hide">
         <picture class="slider-pics">
           <source srcset="images/homepage/family-gathering-tablet.jpg" media="(max-device-width: 768px) and (min-device-width: 415px)">
           <source srcset="images/homepage/family-gathering-mobile.jpg" media="(max-device-width: 415px) and (min-device-width: 320px)">
@@ -120,7 +120,7 @@
         </div>
       </div>
 
-      <div class="slider-grid" id="special-2">
+      <div class="slider-grid show-hide">
         <picture class="slider-pics">
             <source srcset="images/homepage/special-events-tablet.jpg" media="(max-device-width: 768px) and (min-device-width: 415px)">
             <source srcset="images/homepage/special-events-mobile.jpg" media="(max-device-width: 415px) and (min-device-width: 320px)">
@@ -133,7 +133,7 @@
         </div>
       </div>
 
-      <div class="slider-grid" id="social-3">
+      <div class="slider-grid show-hide">
         <picture class="slider-pics">
           <source srcset="images/homepage/social-events-tablet.jpg" media="(max-device-width: 768px) and (min-device-width: 415px)">
           <source srcset="images/homepage/social-events-mobile.jpg" media="(max-device-width: 415px) and (min-device-width: 320px)">
@@ -147,18 +147,13 @@
       </div>
 
     </div>
-    <nav class="switch-wrap">
-      <div class="indicator">
-        <div class="marker active"></div>
-        <div class="marker"></div>
-        <div class="marker"></div>
-      </div>
-      <div class="switches">
-        <a href="#gathering-1">Family Gathering</a>
-        <a href="#special-2">Special Events</a>
-        <a href="#social-3">Social Events</a>
-      </div>
-    </nav>
+
+    <div class="switcher-wrap">
+      <span class="switcher" onclick="currentSlide(1)">Family Gathering</span>
+      <span class="switcher" onclick="currentSlide(2)">Special Events</span>
+      <span class="switcher" onclick="currentSlide(3)">Social Events</span>
+    </div>
+
   </section>
 
   <footer>
@@ -176,64 +171,41 @@
   </footer>
 
   <script>
-    //var slideIndex = 0;
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-    //new variable = an array of elements under .switches
-    var switches = document.querySelectorAll('.switches a');
-
-    //new variable = an array of elements with classname marker
-    var marker = document.querySelectorAll('.marker');
-
-    for (let i=0; i < switches.length; i++) {
-      switches[i].onclick = function(){
-        marker[i].classList.add('active');
-        let nonactive = marker.splice(i, 1);
-        //nonactive.classList.remove('active');
-        console.log(marker);
-        console.log(nonactive);
-
-      }
+    // funtion triggered by switcher being clicked
+    // n is passed into this function through inline Javascript
+    function currentSlide(n) {
+      slideIndex = n;
+      showSlides(slideIndex);
     }
 
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName('show-hide');
+      var switcher = document.getElementsByClassName('switcher');
 
-    //function moveMarker() {
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
 
-    //  for(let i=0; i < switches.length; i++) {
-    //    switches[i].onclick = function(){
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
 
-    //      if (marker[i])
+      for (i=0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
 
-    //      for (let j=0; j < marker.length; j++) {
-    //        if (i==j) {
-    //          marker[j].classList.add('active');
-    //        }
-    //        else {
-    //          marker[j].classList.remove('active');
-    //        }
-    //      }
-    //    }
+      for (i=0; i < switcher.length; i++) {
+        switcher[i].className = switcher[i].className.replace('active', "");
+      }
 
-    //  }
+      slides[slideIndex - 1].style.display = 'grid';
+      switcher[slideIndex - 1].className += ' active';
 
-    //}
-
-    //  for (i = 0; i < slides.length; i++) {
-    //    // initially set the display to
-    //    // none for every image.
-    //    slides[i].style.display = "none";
-    //  }
-
-    //  // increase by 1, Global variable
-    //  slideIndex++;
-
-    //  // check for boundary
-    //  if (slideIndex > slides.length) {
-    //    slideIndex = 1;
-    //  }
-
-    //  for (i = 0; i < marker.length; i++) {
-    //    marker[ i ].className = marker[ i ].className.replace(" active", "");
-    //  }
+    }
 
 
 
