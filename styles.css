@@ -312,6 +312,20 @@ section.slider {
     height: 638px;
     justify-content: space-between;
     align-items: end;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
 }
 
 .slider-pics {
@@ -365,21 +379,17 @@ section.slider {
     text-transform: uppercase;
 }
 
-.switcher.active {
-    opacity: 1;
-}
-
-.switcher.active::before {
+.switcher::before {
     content: "";
     width: 95px;
-    border-bottom: solid 2px #9E7F66;
+    height: 1.5px;
+    background-color: transparent;
     display: block;
     position: relative;
-    left: -132px;
+    left: -138px;
     top: 15px;
     z-index: -1;
     transition: background-color 0.5s ease;
-
 }
 
 .switcher.active {
