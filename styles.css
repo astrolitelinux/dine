@@ -8,6 +8,16 @@ body {
     font-family: 'Spartan', sans-serif;
 }
 
+.attribution {
+	font-size: 13px;
+    text-align: center;
+    padding: 15px 0 8px;
+}
+
+.attribution a {
+    color: #9E7F66
+}
+
 /* TODO: get fonts to load faster */
 
 /** resetting button font style */
@@ -312,9 +322,11 @@ section.slider {
     height: 638px;
     justify-content: space-between;
     align-items: end;
-    animation-duration: 0.6s;
-    animation-timing-function: ease-in-out;
-    animation-name: slidein;
+    animation: 0.6s ease-in-out slidein, .4s ease fade;
+    -webkit-animation: 0.6s ease-in-out slidein, .4s ease fade;
+    -moz-animation: 0.6s ease-in-out slidein, .4s ease fade;
+    -o-animation: 0.6s ease-in-out slidein, .4s ease fade;
+
 }
 
 @keyframes slidein {
@@ -328,10 +340,62 @@ section.slider {
     }
 }
 
+@-webkit-keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@-moz-keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@-o-keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@-moz-keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@-o-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
 .slider-pics {
     width: 540px;
     height: 600px;
-    box-shadow: 0 40px 85px -50px #38425580;
     display: block;
 }
 
@@ -352,7 +416,7 @@ section.slider {
 .book-slider {
     background-color: #111111;
 	color: #ffffff;
-	border: 1px solid #ffffff;
+    border: 1px solid #ffffff;
 }
 
 .switcher-wrap {
@@ -860,7 +924,6 @@ section.book-footer-wrap {
 
     .slide-wrapper {
         padding: 0;
-        width: 689px;
         flex-direction: column;
     }
 
@@ -1136,7 +1199,6 @@ section.book-footer-wrap {
         text-align: center;
     }
 
-    /*margin set to center the img */
     .highlights-left img {
         margin: 0 auto;
     }
@@ -1188,10 +1250,10 @@ section.book-footer-wrap {
     }
 
     .slider-grid {
-        grid-template-rows: 400px 252px;
+        grid-template-rows: 400px auto;
         grid-template-columns: auto;
         row-gap: 188px;
-        height: 840px;
+        height: 865px;
 
     }
 
@@ -1202,7 +1264,7 @@ section.book-footer-wrap {
 
     .slider-text {
         width: 100%;
-        height: 252px;
+        height: 100%;
         text-align: center;
     }
 
